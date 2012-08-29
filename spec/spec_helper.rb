@@ -10,9 +10,9 @@ class TestApplicationController < ApplicationController
 
 	include LittleBrother::Record
 
-	  #instance variable for current_user (session)
-  def current_user
-    @current_user = "John Doe"
+	#instance variable for watch_user
+  def watch_user
+    @watch_user = "John Doe"
   end
   helper_method :current_user
 
