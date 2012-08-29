@@ -18,12 +18,12 @@ Or install it yourself as:
 
 Run the generation
 
-		$ rails generation little_brother_setup
+    $ rails generation little_brother_setup
 
 This will create the migration`timestamp_create_watchers.rb` so you can create the table `watchers`
 Run the migration
 
-		$ rake db:migrate
+    $ rake db:migrate
 
 ## Usage
 
@@ -39,11 +39,37 @@ class ApplicationController < ApplicationController
 end
 ```
 
-# User oriented recording
+## Usage :: User oriented recording
 If you want to keep track of the user that triggers the actions, you have to supply a `watch_user` method in the controller.
 
 ```erb
+class ApplicationController < ApplicationController
+
+	include LittleBrother::Record
+
   def watch_user
     @watch_user = "John Doe"
   end
+	...
+
+end
 ```
+
+## Helpers
+Some managment and statistics utils are provided to retrive the stored data
+Utils provided by `LittleBrother::Utils` module:
+
+
+LittleBrother::Utils.truncate_watchers
+LittleBrother::Utils.keep_only_last_months
+LittleBrother::Utils.user_actions_in_timeframe
+
+Statistics provided by `LittleBrother::Statistics` module:
+LittleBrother::Statistics.most_active_users
+LittleBrother::Statistics.least_active_users
+LittleBrother::Statistics.most_active_users_this_month
+LittleBrother::Statistics.least_active_users_this_month
+LittleBrother::Statistics.most_used_action
+LittleBrother::Statistics.least_used_action
+LittleBrother::Statistics.most_used_controller_action
+LittleBrother::Statistics.least_used_controller_action
