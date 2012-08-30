@@ -39,18 +39,18 @@ class ApplicationController < ApplicationController
 end
 ```
 
-## Usage :: User oriented recording
+### User oriented recording
 If you want to keep track of the user that triggers the actions, you have to supply a `watch_user` method in the controller.
 
 ```erb
 class ApplicationController < ApplicationController
 
-	include LittleBrother::Record
+  include LittleBrother::Record
 
   def watch_user
     @watch_user = "John Doe"
   end
-	...
+  ...
 
 end
 ```
@@ -58,7 +58,7 @@ end
 ## Helpers
 Some managment and statistics utils are provided to retrive the stored data
 
-Utils provided by `LittleBrother::Utils` module:
+### Utils provided by `LittleBrother::Utils` module:
 
 
 LittleBrother::Utils.truncate_watchers
@@ -68,7 +68,7 @@ LittleBrother::Utils.keep_only_last_months
 LittleBrother::Utils.user_actions_in_timeframe
 
 
-Statistics provided by `LittleBrother::Statistics` module:
+### Statistics provided by `LittleBrother::Statistics` module:
 
 LittleBrother::Statistics.most_active_users
 
