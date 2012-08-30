@@ -31,6 +31,11 @@ Run the migration
 
 ## Usage
 
+Require the module
+
+    $ require 'little_brother'
+
+
 Just grab the controller you want to keep track of the actions executed and include the module `include LittleBrother::Record` to start recording.
 
 ```erb

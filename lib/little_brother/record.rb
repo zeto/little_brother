@@ -1,7 +1,6 @@
 module LittleBrother
   module Record
     def self.included(base)
-      base.extend(ClassMethods)
       base.send :before_filter, :record
     end
 
