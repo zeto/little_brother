@@ -6,9 +6,10 @@ Gem::Specification.new do |gem|
   gem.email         = ["rogerpcorreia@gmail.com"]
   gem.description   = %q{Controller request/action monitor}
   gem.summary       = %q{Monitors/Stores every action passed through the controller. The data is stored for conveniently for later analysis and statistics.}
-  gem.homepage      = ""
+  gem.homepage      = "http://rubygems.org/gems/little_brother"
 
-  gem.add_development_dependency  'activerecord',   '~> 3.0'
+  gem.add_dependency('activerecord','>= 3.0.0')
+  gem.add_dependency('activesupport','>= 3.0.0')
   gem.add_development_dependency  'rspec-rails'
   gem.add_development_dependency  'rake'  
 
@@ -17,5 +18,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "little_brother"
   gem.require_paths = ["lib"]
+  gem.date          = '2012-08-30'
   gem.version       = LittleBrother::VERSION
 end
