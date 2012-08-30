@@ -1,10 +1,9 @@
 # LittleBrother
 
-Monitors/Stores every action (controler:action pair) passed through the controller. 
+Tracks and stores every action (controler:action pair) passed through the controller. 
+The gem also supports user oriented tracking for more detailed/focus analysis.
 
-The data is stored for conveniently for later analysis and statistics.
-
-This is NOT like Big Brother! :)
+Disclaimer: this is NOT like Big Brother! :)
 
 ## Installation
 
