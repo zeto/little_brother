@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["rogerpcorreia@gmail.com"]
   gem.description   = %q{Controller request/action monitor}
   gem.summary       = %q{Monitors/Stores every action passed through the controller. The data is stored for conveniently for later analysis and statistics.}
-  gem.homepage      = "http://rubygems.org/gems/little_brother"
+  gem.homepage      = "https://github.com/rpc/little_brother"
 
   gem.add_dependency('activerecord','>= 3.0.0')
   gem.add_dependency('activesupport','>= 3.0.0')
