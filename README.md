@@ -22,7 +22,7 @@ Or install it yourself as:
 
 Run the generation
 
-    $ rails generation little_brother_setup
+    $ rails generate little_brother_setup
 
 This will create the migration`timestamp_create_watchers.rb` so you can create the table `watchers`
 Run the migration
@@ -39,7 +39,7 @@ Require the module
 Just grab the controller you want to keep track of the actions executed and include the module `include LittleBrother::Record` to start recording.
 
 ```erb
-class ApplicationController < ApplicationController
+class SomeController < ApplicationController
 
 	include LittleBrother::Record
 
